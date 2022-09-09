@@ -1,3 +1,11 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable react/jsx-indent-props */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable no-tabs */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable indent */
 import './SearchForm.css';
 
 import { useState } from 'react';
@@ -9,7 +17,8 @@ export function SearchForm({ onSearchSubmit }) {
 		setQuery(evt.target.value);
 	}
 
-	function handleFormSubmit() {
+	function handleFormSubmit(evt) {
+		evt.preventDefault();
 		onSearchSubmit(query);
 	}
 
